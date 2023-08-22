@@ -19,6 +19,12 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
+        Input input = new Input();
+        FibonacciCounter counter = new org.example.FibonacciCounter();
 
+        int n = input.getIntInput("Введите длину последовательности");
+        String result = counter.getFibonacciSequence(n);
+
+        System.out.println(result);
     }
 }
