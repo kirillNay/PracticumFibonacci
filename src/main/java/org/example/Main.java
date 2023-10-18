@@ -20,7 +20,7 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
         Input input = new Input();
-        FibonacciCounter counter = new org.example.FibonacciCounter();
+        FibonacciCounter counter = new FibonacciCounter();
 
         int n = input.getIntInput("Введите длину последовательности");
         String result = counter.getFibonacciSequence(n);
