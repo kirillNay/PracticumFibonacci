@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Scanner;
+
 /**
  Вывести последовательность Фибоначи заданной длины.
  Числа Фибоначи - последовательность чисел, в которой первые два числа равны 0 и 1,
@@ -15,12 +17,24 @@ package org.example;
  4. 3 + 2 = 5
  5. 3 + 5 = 8
 
+
+ ** 1. Ввод информации
+ ** 2. Подсчет последовательности
+ ** 3. Формирование результата
+ ** 4. Вывод результата
+
  */
 
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Input input = new Input();
+        int length = input.getInt("Введите длину последовательности!");
+
+        FibonacciCounter counter = new FibonacciCounter();
+        String result = counter.getSequence(length);
+
+        System.out.println(result);
     }
 
 }
