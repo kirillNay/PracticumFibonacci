@@ -7,7 +7,7 @@ public class FibonacciCounter {
     int b = 1;
 
     String getSequence(int length) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
 
         for (int i = 0; i < length; i++) {
             int sum = a + b;
@@ -16,10 +16,10 @@ public class FibonacciCounter {
             a = b;
             b = sum;
 
-            result += line;
+            result.append(line);
         }
 
-        return result;
+        return result.toString();
     }
 
 }
