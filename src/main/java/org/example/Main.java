@@ -20,7 +20,20 @@ package org.example;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Input input = new Input();
+        int length = input.getIntInput();
+
+        FibonicciSequence fibonicciSequence = new FibonicciSequence();
+        String[] sequence = fibonicciSequence.getSequence(length);
+
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < length; i++) {
+            builder.append(sequence[i]);
+            builder.append("\n");
+        }
+
+        Output output = new Output();
+        output.print(builder.toString());
     }
 
 }
