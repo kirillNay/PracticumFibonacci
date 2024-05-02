@@ -15,12 +15,25 @@ package org.example;
  4. 3 + 2 = 5
  5. 3 + 5 = 8
 
+ 1. ----- Получить длину с консоли
+ 2. ----- Составление последовательности
+ 3. ----- Формирование результата и вывод в консоль
+ 4. Сохранение проекта и создание Pull Request
+
  */
 
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Input input = new Input();
+
+        int length = input.getInteger("Введите длину последовательности");
+        System.out.println(length);
+
+        FibonacciSequence sequence = new FibonacciSequence();
+        String result = sequence.formSequence(length);
+
+        System.out.println(result);
     }
 
 }
