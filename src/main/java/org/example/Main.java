@@ -15,12 +15,19 @@ package org.example;
  4. 3 + 2 = 5
  5. 3 + 5 = 8
 
+    1. ---- Получить длину последовательности из консоли
+    2. Формирование последовательности
+    3. Вывод результата на экран
+    4. Формирование Pull Request
+
  */
 
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Input input = new Input();
+        int length = input.getIntegerValue("Введите длину последовательности", "Введено некорректное значение");
+        System.out.println("Введено: " + length);
     }
 
 }
