@@ -20,7 +20,13 @@ package org.example;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Input input = new Input();
+        int length = input.getIntegerValue("Введите длину последовательности", "Введено некорректное значение");
+
+        FibonacciSequenceCreator creator = new FibonacciSequenceCreator();
+        String sequence = creator.createSequence(length);
+
+        System.out.println(sequence);
     }
 
 }
