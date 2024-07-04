@@ -16,21 +16,21 @@ public class FibonacciSequenceCreator {
         int firstNumber = 0;
         int secondNumber = 1;
 
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for (int i = 0; i < length; i++) {
             // Формируем значения для текущей итерации
             int sum = firstNumber + secondNumber;
 
-            String line = String.format("%d. %d + %d = %d", i + 1, firstNumber, secondNumber, sum);
-            result += line + "\n";
+            String line = String.format("%d. %d + %d = %d\n", i + 1, firstNumber, secondNumber, sum);
 
+            result.append(line);
 
             // Подготавливаем значения для следующей итерации
             firstNumber = secondNumber;
             secondNumber = sum;
         }
 
-        return result;
+        return result.toString();
     }
 
 }
