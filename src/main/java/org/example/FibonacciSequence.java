@@ -11,7 +11,7 @@ public class FibonacciSequence {
      */
 
     public String getSequence(int length) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
 
         int firstValue = 0;
         int secondValue = 1;
@@ -19,14 +19,14 @@ public class FibonacciSequence {
         for (int i = 0; i < length; i++) {
             // Формирование текущей строчки
             int sum = firstValue + secondValue;
-            result += String.format("%d. %d + %d = %d\n", i + 1, firstValue, secondValue, sum);
+            result.append(String.format("%d. %d + %d = %d\n", i + 1, firstValue, secondValue, sum));
 
             // Подготовка к следующей итерации
             firstValue = secondValue;
             secondValue = sum;
         }
 
-        return result;
+        return result.toString();
     }
 
 }
