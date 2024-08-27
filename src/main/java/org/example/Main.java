@@ -15,12 +15,6 @@ package org.example;
  4. 3 + 2 = 5
  5. 3 + 5 = 8
 
- 1. Принимать ввод от пользователя
- 2. Формировать последовательность
-
-
- 3. Формирование результата и вывод его
-
  */
 
 public class Main {
@@ -33,10 +27,11 @@ public class Main {
                 100,
                 0
         );
-        System.out.println("Введенное значение: " + length);
 
-        FibonacciSequence sequence = new FibonacciSequence();
-        sequence.getSequence(length);
+        FibonacciSequence sequenceGenerator = new FibonacciSequence();
+        String sequence = sequenceGenerator.getSequence(length);
+
+        System.out.println(sequence);
 
         input.release();
     }
