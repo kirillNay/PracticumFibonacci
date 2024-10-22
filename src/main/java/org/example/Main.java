@@ -34,9 +34,10 @@ public class Main {
                 100
         );
 
-        FibonacciSequence sequence = new FibonacciSequence();
-        sequence.getSequence(length);
+        FibonacciSequence sequenceGenerator = new FibonacciSequence();
+        String sequence  = sequenceGenerator.getSequence(length);
 
+        System.out.println(sequence);
 
         input.release();
     }

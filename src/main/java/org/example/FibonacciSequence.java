@@ -14,16 +14,18 @@ public class FibonacciSequence {
         int firstValue = 0;
         int secondValue = 1;
 
+        StringBuilder builder = new StringBuilder();
         for (int i = 0; i < length; i++) {
             // Формирование текущей строчки
             int sum = firstValue + secondValue;
-            System.out.println(String.format("%d. %d + %d = %d", i + 1, firstValue, secondValue, sum));
+            builder.append(String.format("%d. %d + %d = %d\n", i + 1, firstValue, secondValue, sum));
 
             // Подготовка следующей строчки
             firstValue = secondValue;
             secondValue = sum;
         }
-        return "";
+
+        return builder.toString();
     }
 
 }
