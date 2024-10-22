@@ -15,12 +15,26 @@ package org.example;
  4. 3 + 2 = 5
  5. 3 + 5 = 8
 
+ 1. Принять ввод от пользователя.
+ 2. Формирование последовательности.
+ 3. Сбор и вывод информации.
+
  */
 
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Input input = new Input();
+        int length = input.getIntegerValue(
+                "Введите число последовательности Фибоначчи",
+                "Невалидный ввод. Повторите попытку!",
+                1,
+                100
+        );
+
+        System.out.println("Введенное значение: " + length);
+
+        input.release();
     }
 
 }
