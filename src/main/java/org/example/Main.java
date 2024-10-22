@@ -17,6 +17,8 @@ package org.example;
 
  1. Принять ввод от пользователя.
  2. Формирование последовательности.
+
+
  3. Сбор и вывод информации.
 
  */
@@ -32,7 +34,9 @@ public class Main {
                 100
         );
 
-        System.out.println("Введенное значение: " + length);
+        FibonacciSequence sequence = new FibonacciSequence();
+        sequence.getSequence(length);
+
 
         input.release();
     }
